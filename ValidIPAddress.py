@@ -7,10 +7,11 @@ clear_console()
 
 def validIPAddress():
     queryIP = input('Enter an IP Address: ')
+
     def IPv4_check():
         # Set up for logic
-        ip_int = []
         IPv4 = True
+        ip_int = []
         ip = queryIP.split('.')
         # Checks if the ip address only contains integers
         try:
@@ -29,8 +30,22 @@ def validIPAddress():
         for i in ip:
             if len(i) >= 2 and i[0] == '0':
                 IPv4 = False
-    IPv4_check()
 
+    def IPv6_check():
+        IPv6 = True
+        ip = queryIP.split(':')
+        # Checks if the ip address has only 8 sections
+        if len(ip) != 8:
+            IPv6 = False
+        # Checks if each section of the ip address is longer than 4 or shorter than 1
+        for i in ip:
+            if len(i) < 1 or len(i) > 4:
+                IPv6 = False
+
+
+
+
+    IPv4_check()
 validIPAddress()
 
 
