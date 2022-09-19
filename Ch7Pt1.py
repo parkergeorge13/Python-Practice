@@ -1,6 +1,6 @@
 # Parker George
 # IS 403 Section 4
-# Chapter 7 Homework
+# Chapter 7 Homework Part 1
 
 # Write a program that prompts the user to enter the maximum number used in generating a random number. Then generate the random number. 
 # Start the timer as the user tries to guess the number. Display whether the guess is "Too High" or "Too Low". 
